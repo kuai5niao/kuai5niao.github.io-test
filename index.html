@@ -141,7 +141,7 @@
             var constMonth = month;
             var constDay = day;
             // 星期
-            var week = new Date(year + '-' + month + '-' + 1).getDay();
+            var week = new Date(year + '/' + month + '/' + 1).getDay();
             // 当月总天数
             var nowDays;
             //上一月总天数
@@ -175,7 +175,7 @@
             }
             //计算复习周期
             function getReview(day){
-            	var selectDay=new Date(year + '-' + month + '-' + day);
+            	var selectDay=new Date(year + '/' + month + '/' + day);
             	var selectDayTime= Date.parse(selectDay)/1000;
             	var nowDateTime= Date.parse(nowDate)/1000;
             	var intervalTime=Math.round((selectDayTime-nowDateTime)/6);
@@ -217,10 +217,10 @@
                 //日的html
                 var dayHtml = '<tr><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td></tr>';
                 // 如果上个月的最后一天是周六，那就要占7天！
-                if (new Date(year + '-' + lastMonth + '-' + lastDays).getDay() === 6) {
+                if (new Date(year + '/' + lastMonth + '/' + lastDays).getDay() === 6) {
                     week = 7;
                 } else {
-                    week = new Date(year + '-' + month + '-' + 1).getDay();
+                    week = new Date(year + '/' + month + '/' + 1).getDay();
                 }
                 var dateArr = [];
                 for (var i_last = lastDays - week + 1; i_last < lastDays + 1; i_last++) {
