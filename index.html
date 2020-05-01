@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./src/js/jquery.js"></script>
     <style>
         /* 弹出的最外层 */
 
@@ -191,7 +191,7 @@
             	for(var n=0;n<objReview.length-1;n++){
             		tmpDate=new Date(objReview[n]*1000);console.log(tmpDate);
             		tmpDateNext=new Date(objReview[n+1]*1000);
-            		reviewHtml+='<strong>第'+(n+1)+'个周期 选择一天进行复习：'+tmpDate.getFullYear()+'-'+(tmpDate.getMonth()+1)+'-'+tmpDate.getDate()+' 至 '+tmpDateNext.getFullYear()+'-'+(tmpDateNext.getMonth()+1)+'-'+tmpDateNext.getDate()+'</strong><br>';
+            		reviewHtml+='<strong>第'+(n+1)+'个周期 选择一天进行复习：'+tmpDate.getFullYear()+'-'+(tmpDate.getMonth()+1)+'-'+tmpDate.getDate()+' 至 '+tmpDateNext.getFullYear()+'-'+(tmpDateNext.getMonth()+1)+'-'+tmpDateNext.getDate()+'</strong><br><br>';
             	}
             	tmpDate=new Date(objReview[objReview.length-1]*1000);
             	reviewHtml+='<strong>第5个周期 选择一天进行复习：'+tmpDate.getFullYear()+'-'+(tmpDate.getMonth()+1)+'-'+tmpDate.getDate()+' 至 '+selectDay.getFullYear()+'-'+(selectDay.getMonth()+1)+'-'+selectDay.getDate()+'</strong>';
